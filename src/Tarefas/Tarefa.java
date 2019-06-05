@@ -8,5 +8,7 @@ public class Tarefa {
         Relatorio relatorio = new Relatorio();
         Thread thread2 = new Thread(relatorio);
         thread2.start(); //executa parte da segunda thread e depois executa parte da primeira thread
+//        thread1.join();
+//        thread2.join();
     }
 }
