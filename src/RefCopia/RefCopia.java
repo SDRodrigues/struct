@@ -10,8 +10,8 @@ public class RefCopia {
         Object d = c;
         System.out.println("Valor de A " + a);
         System.out.println("Valor de B " + b);
-        System.out.println(c);
-        System.out.println(d);
+        System.out.println("Endereco de " + c);
+        System.out.println("Endereco de " + d);
 
     }
 

@@ -37,11 +37,12 @@ public class Sema extends Thread {
                 }
             } catch (InterruptedException erro) {
                 System.out.println("Erro" + erro);
+            } finally {
+                System.out.println(nomeDaThread + " libera permissao");
+                semaphore.release();
             }
-            System.out.println(nomeDaThread + " libera permissao");
-            semaphore.release();
+
         } else {
-            if (this.getName().equals("B"))
             System.out.println("Comecando a thread " + nomeDaThread);
             try {
                 // primeiro, buscamos a permissao
@@ -62,8 +63,11 @@ public class Sema extends Thread {
             } catch (InterruptedException erro) {
                 System.out.println("Erro" + erro);
             }
-            System.out.println(nomeDaThread + " libera permissao");
-            semaphore.release();
+            finally {
+                System.out.println(nomeDaThread + " libera permissao");
+                semaphore.release();
+            }
+
         }
 
     }

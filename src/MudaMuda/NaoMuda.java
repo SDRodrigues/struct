@@ -1,6 +1,6 @@
 package MudaMuda;
 
-public class NaoMuda {
+public final class NaoMuda {
     private final double d;
     private final double r;
 
